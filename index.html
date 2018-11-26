@@ -43,6 +43,24 @@
                         </div>
                         <section class="info">
                             <div class="description">
+                                <form method="post" action="/" novalidate>
+                                    <div class="description">
+                                        <h3>Your name</h3>
+                                    </div>
+                                    <div class="description">
+                                        <input class="input" id="name" name="name" type="name" value="" />
+                                        <button class="btn" id="start" type="submit">Start the game</button>
+                                        <script>
+                                            $('#start').click(function(){
+                                                $.post('/test')
+                                            });
+                                        </script>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <section class="info">
+                            <div class="description">
                                 <h3>Description</h3>
                                 <p><strong>The goal of the game is to shoot Kubernetes platform objects!</strong></p>
                                 <p>Be careful though, if destructive mode is on, you could destroy your game.</p>

@@ -101,6 +101,34 @@ p {
     padding: 1em;
 }
 
+.input {
+    background: #2c2c2b;
+    color: #fff;
+    padding: 1em;
+    width: 100%;
+}
+
+.form-field {
+    background: #2c2c2b;
+    color: #fff;
+    padding: 1em;
+    width:100;
+}
+
+.form-actions {
+    background: #2c2c2b;
+    color: #fff;
+    padding: 1em;
+}
+
+.btn {
+    background: #bd4927;
+    color: #fff;
+    text-align:center;
+    padding: 1em;
+    width: 100%;
+}
+
 .heading hr {
     display: block;
     height: 1px;
