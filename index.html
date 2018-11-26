@@ -43,18 +43,13 @@
                         </div>
                         <section class="info">
                             <div class="description">
-                                <form method="post" action="/" novalidate>
+                                <form novalidate>
                                     <div class="description">
                                         <h3>Your name</h3>
                                     </div>
                                     <div class="description">
                                         <input class="input" id="name" name="name" type="name" value="" />
-                                        <button class="btn" id="start" type="submit">Start the game</button>
-                                        <script>
-                                            $('#start').click(function(){
-                                                $.post('/test')
-                                            });
-                                        </script>
+                                        <input class="btn" id="start" value="Start the game" />
                                     </div>
                                 </form>
                             </div>
@@ -122,7 +117,15 @@
                         }
                     });
                 }
-        
+
+                $('#start').click(function(){
+                    var name = $('#name').val();
+                    console.log(name);
+                    $.post('/test', { name: name})
+                    .done(function( data ) {
+                        alert( "Data Loaded: " + data );
+                    });
+                });
             </script>        
         </div>
     </body>
